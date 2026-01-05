@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Thiệp Mời: Đình Đông & Thu Hoài</title>
+  </head>
+  <body>
+    <!-- INTRO THIỆP -->
+    <div class="intro" id="intro">
+      <canvas id="snow"></canvas>
+      <div class="intro-card">
+        <div class="intro-heart">❤</div>
+        <h2>Đình Đông & Thu Hoài</h2>
+        <p>Thân mời</p>
+        <div class="family">Anh/Chị/Em/Bạn</div>
+        <!-- 👇 TÊN NGƯỜI ĐƯỢC MỜI -->
+        <h3 class="guest-name">
+          <span id="guestName">Bạn</span>
+        </h3>
+        <button id="open-invite">
+          <i class="fa-solid fa-envelope-open"></i>
+          Mở thiệp
+        </button>
+      </div>
+    </div>
+    <audio id="bg-music" src="MMBN.mp3" loop></audio>
+    <button id="music-btn" class="music-btn">
+      <i class="fa-solid fa-volume-xmark"></i>
+    </button>
+
+    <div class="main-content" id="main">
+      <canvas id="sakura"></canvas>
+      <div class="container">
+        <div class="wedding-poster">
+          <div class="wedding-poster__content">
+            <h4 class="save-date">Save the date</h4>
+            <h1 class="groom">Đình Đông</h1>
+            <span class="and">&</span>
+            <h1 class="groom">Thu Hoài</h1>
+            <div class="wedding-date">24 tháng 01 2026</div>
+            <a href="#wishForm" class="navigate-wish">Gửi lời chúc</a>
+          </div>
+        </div>
+        <img src="images/image_2.png" alt="" class="spolight" />
+        <section id="calendar" class="calendar-section reveal zoom">
+          <h2 class="calendar-title">
+            <i class="fa fa-calendar"></i> LỊCH CƯỚI
+          </h2>
+
+          <div class="calendar-card">
+            <div class="calendar-header">
+              <span>Tháng 01 / 2026</span>
+            </div>
+
+            <div class="calendar-grid">
+              <div>CN</div>
+              <div>T2</div>
+              <div>T3</div>
+              <div>T4</div>
+              <div>T5</div>
+              <div>T6</div>
+              <div>T7</div>
+
+              <!-- trống -->
+              <div class="empty"></div>
+              <div class="empty"></div>
+              <div class="empty"></div>
+              <div class="empty"></div>
+
+              <!-- ngày -->
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
+              <div>13</div>
+              <div>14</div>
+              <div>15</div>
+              <div>16</div>
+              <div>17</div>
+              <div>18</div>
+              <div>19</div>
+              <div>20</div>
+              <div>21</div>
+              <div>22</div>
+              <div class="wedding-day">23</div>
+              <div class="wedding-day">24</div>
+              <div>25</div>
+              <div>26</div>
+              <div>27</div>
+              <div>28</div>
+              <div>29</div>
+              <div>30</div>
+              <div>31</div>
+            </div>
+
+            <div class="calendar-info">
+              <a
+                class="add-calendar"
+                target="_blank"
+                href="https://www.google.com/calendar/render?action=TEMPLATE
+        &text=Lễ+Cưới+Sơn+❤️+Vân
+        &dates=20260126T020000Z/20260126T050000Z
+        &details=Trân+trọng+kinh+mời
+        &location=Việt+Nam"
+              >
+                + Lưu vào Google Calendar
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div class="album">
+          <div class="album-header">
+            <img
+              src="images/image_1.png"
+              alt=""
+              class="album-header-left album-icon"
+            />
+            <span class="album-title">ALBUM ẢNH CƯỚI</span>
+            <img
+              src="images/image_1.png"
+              alt=""
+              class="album-header-right album-icon"
+            />
+          </div>
+        </div>
+
+        <div class="carousel reveal">
+          <!-- ảnh lớn -->
+          <div class="carousel-main">
+            <div class="image-wrapper">
+              <img id="mainImage" src="images/DH3.jpg" />
+            </div>
+          </div>
+
+          <!-- thumbnail -->
+          <div class="carousel-thumbs">
+            <img src="images/DH3.jpg" class="thumb active" />
+            <img src="images/DH4.jpg" class="thumb" />
+            <img src="images/DH5.jpg" class="thumb" />
+            <img src="images/DH6.jpg" class="thumb" />
+            <div class="thumb more" data-more="+12">
+              <img src="images/DH7" />
+            </div>
+          </div>
+        </div>
+
+        <div class="album">
+          <div class="album-header">
+            <img
+              src="images/image_1.png"
+              alt=""
+              class="album-header-left album-icon"
+            />
+            <span class="album-title">THÔNG TIN LỄ CƯỚI</span>
+            <img
+              src="images/image_1.png"
+              alt=""
+              class="album-header-right album-icon"
+            />
+          </div>
+          <div class="info-wedding">
+            <div class="info-item">
+              <p>Ông Bà</p>
+              <h3>Nguyễn Đình Tùng</h3>
+              <h3>Nguyễn Thị Hiệu</h3>
+              <p>Xóm Hưng Yên Nam 5, Yên Trung, Nghệ An</p>
+            </div>
+
+            <span class="division"></span>
+
+            <div class="info-item">
+              <p>Ông Bà</p>
+              <h3>Hoàng Văn Hùng</h3>
+              <h3>Phạm Thị Hướng</h3>
+              <p>Xóm Hưng Yên Nam 5, Yên Trung, Nghệ An</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="time-wedding">
+          <p class="time-wedding-header">TRÂN TRỌNG KÍNH MỜI DỰ</p>
+          <p class="time-wedding-header">LỄ THÀNH HÔN CỦA CON CHÚNG TÔI</p>
+          <h2 class="human">Đình Đông</h2>
+          <p class="human-posi">Thứ Nam</p>
+          <span class="and">&amp;</span>
+          <h2 class="human">Thu Hoài</h2>
+          <p class="human-posi">Thứ Nữ</p>
+          <p class="time-char">HÔN LỄ ĐƯỢC CỬ HÀNH TẠI</p>
+          <h3 class="time-place">TƯ GIA NHÀ TRAI</h3>
+          <p class="time-detail-text">VÀO LÚC</p>
+          <h3 class="time-hour">10:30</h3>
+
+          <div class="time-desc">
+            <p class="time-week">THỨ BẢY</p>
+            <span class="division2"></span>
+            <p class="time-day">24</p>
+            <span class="division2"></span>
+            <p class="time-month">THÁNG 01</p>
+          </div>
+
+          <p class="time-year">NĂM 2026</p>
+          <p class="at-date">(Tức ngày 06/12 Ất Tỵ)</p>
+        </div>
+
+        <div class="album album2">
+          <div class="album-header">
+            <img
+              src="images/image_1.png"
+              alt=""
+              class="album-header-left album-icon"
+            />
+            <span class="album-title">THÔNG TIN TIỆC CƯỚI</span>
+            <img
+              src="images/image_1.png"
+              alt=""
+              class="album-header-right album-icon"
+            />
+          </div>
+          <p class="time-wedding-header-secondary">
+            TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:
+          </p>
+          <h3>09:00</h3>
+
+          <div class="time-desc">
+            <p class="time-week">THỨ SÁU</p>
+            <span class="division2"></span>
+            <p class="time-day">23</p>
+            <span class="division2"></span>
+            <p class="time-month">THÁNG 01</p>
+          </div>
+
+          <p class="time-year">NĂM 2026</p>
+
+          <h3 class="info-map">TIỆC CƯỚI SẼ TỔ CHỨC TẠI</h3>
+          <p class="info-map-place">Tư Gia Nhà Gái</p>
+
+          <h2 class="count-title">ĐỒNG HỒ ĐẾM NGƯỢC</h2>
+          <div class="countdown">
+            <div class="time">
+              <span id="days">00</span>
+              <small>NGÀY</small>
+            </div>
+            <div class="time">
+              <span id="hours">00</span>
+              <small>GIỜ</small>
+            </div>
+            <div class="time">
+              <span id="minutes">00</span>
+              <small>PHÚT</small>
+            </div>
+            <div class="time">
+              <span id="seconds">00</span>
+              <small>GIÂY</small>
+            </div>
+          </div>
+          <div class="wedding-form reveal lefts">
+            <form id="wishForm" class="wish-form">
+              <h1 class="wedding-form__title">XÁC NHẬN</h1>
+              <p class="wedding-form__caption">
+                Hãy xác nhận sự có mặt của bạn để chúng mình chuẩn bị đón tiếp 1
+                cách chu đáo nhất.
+              </p>
+              <div class="form-content">
+                <span>Trân trọng!</span>
+                <input id="name" placeholder="Tên của bạn" required />
+                <textarea
+                  id="message"
+                  placeholder="Lời chúc"
+                  required
+                ></textarea>
+                <button type="submit">Gửi lời chúc</button>
+              </div>
+            </form>
+          </div>
+
+          <div id="wishList" class="wish-list reveal rights"></div>
+
+          <p class="thank-you">
+            Gia đình xin chân thành cảm ơn Quý Khách đã đến chung vui
+          </p>
+
+          <h3 class="happy">Quét mã để gửi mừng cưới</h3>
+
+          <p class="qr-title">Cô Dâu</p>
+          <img src="images/QR-HOAI.png" alt="hoaiQR" class="qr-img" />
+          <p class="bank-name">Vietcombank</p>
+          <p class="bank-number">1967183747</p>
+          <p class="bank-holder">HOÀNG THỊ HOÀI</p>
+
+          <p class="thank-you2">Thank You!</p>
+        </div>
+      </div>
+    </div>
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <span class="close">×</span>
+      <span class="nav prev"><i class="fa fa-angle-left"></i></span>
+      <img id="lightboxImage" />
+      <span class="nav next"><i class="fa fa-angle-right"></i></span>
+    </div>
+    <script src="script.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+        serverTimestamp,
+        onSnapshot,
+        query,
+        orderBy,
+      } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCQT4xYs_lDUjcgk8oMDbBvyHjb5NQRjuM",
+        authDomain: "wedding-donghoai.firebaseapp.com",
+        projectId: "wedding-donghoai",
+        storageBucket: "wedding-donghoai.firebasestorage.app",
+        messagingSenderId: "1098280854948",
+        appId: "1:1098280854948:web:d1e00ae003a9135a2a8d31",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      console.log("🔥 Firebase connected!");
+
+      const form = document.getElementById("wishForm");
+      const nameInput = document.getElementById("name");
+      const messageInput = document.getElementById("message");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const nameValue = nameInput.value.trim();
+        const messageValue = messageInput.value.trim();
+
+        if (!nameValue || !messageValue) {
+          alert("Vui lòng nhập đầy đủ thông tin 💌");
+          return;
+        }
+
+        await addDoc(collection(db, "wishes"), {
+          name: nameValue,
+          message: messageValue,
+          createdAt: serverTimestamp(),
+        });
+
+        alert("💖 Đã gửi lời chúc!");
+        form.reset();
+      });
+
+      const list = document.getElementById("wishList");
+
+      const q = query(collection(db, "wishes"), orderBy("createdAt", "desc"));
+
+      onSnapshot(q, (snapshot) => {
+        list.innerHTML = "";
+
+        snapshot.forEach((doc) => {
+          const w = doc.data();
+
+          const card = document.createElement("div");
+          card.className = "wish-card";
+
+          const time = w.createdAt?.toDate
+            ? w.createdAt.toDate().toLocaleString("vi-VN")
+            : "";
+
+          card.innerHTML = `
+      <div class="wish-name">${w.name}</div>
+      <div class="wish-message">${w.message}</div>
+      <div class="wish-time">${time}</div>
+    `;
+
+          list.appendChild(card);
+
+          // trigger animation
+          requestAnimationFrame(() => {
+            card.classList.add("show");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

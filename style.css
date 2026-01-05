@@ -1,0 +1,921 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+
+input,
+select,
+textarea,
+button {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+:root {
+  --primary-color: #e1c491;
+}
+
+.wedding-poster {
+  width: 100%;
+  height: 70rem;
+  background-image: linear-gradient(45deg, #f0d9d977, #e9cfbe83),
+    url("images/DH3.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  display: flex;
+  justify-content: center;
+  padding: 15rem 5rem 5rem;
+  animation: changeBG 6s ease-out infinite alternate;
+}
+
+@keyframes changeBG {
+  50% {
+    background-image: linear-gradient(45deg, #f0d9d977, #e9cfbe83),
+      url("images/DH4.jpg");
+  }
+  100% {
+    background-image: linear-gradient(45deg, #f0d9d977, #e9cfbe83),
+      url("images/DH5.jpg");
+  }
+}
+
+.wedding-poster__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.save-date {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.groom,
+.and {
+  font-size: 4.5rem;
+  font-weight: 500;
+  font-family: "DM Serif Display", serif;
+}
+
+.groom:last-of-type {
+  position: relative;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.groom:last-of-type::before {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 2px;
+  background-color: #fff;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wedding-date {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.navigate-wish {
+  padding: 1rem 5rem;
+  border: 2px solid #fff;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2rem;
+  position: relative;
+  transition: all 0.25s linear;
+  font-weight: 500;
+}
+
+.navigate-wish::before {
+  content: "";
+  width: 95%;
+  height: 140%;
+  position: absolute;
+  border: 1px solid #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.25s linear;
+}
+
+.navigate-wish:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.navigate-wish:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+}
+
+.container {
+  width: 420px;
+  margin: 0 auto;
+  background-image: linear-gradient(#fef0e0e8, #fef0e0e8),
+    url("images/image_4.png"), url("images/image_4.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: cover, 30rem, 30rem;
+  background-position: center, 10% 40%, 90% 70%;
+}
+
+.title {
+  width: 100%;
+  font-size: 4rem;
+  text-align: center;
+  font-family: "Ma Shan Zheng", cursive;
+}
+
+.spolight {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+}
+
+.image-wraper {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.img-base {
+  width: 100%;
+  transform: rotate(180deg);
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  transform: translateX(50%) translateY(20%);
+}
+
+.album {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.album-header {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.album-header-left,
+.album-header-right {
+  display: inline-block;
+  width: 4rem;
+}
+
+.album-title {
+  display: inline-block;
+  height: 100%;
+  background-image: url("images/image_6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "DM Serif Display", serif;
+}
+
+.album-header-left {
+  transform: rotate(70deg) translateX(1.5rem);
+}
+
+.album-header-right {
+  transform: translateX(-1rem);
+}
+
+.album-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.album-item {
+  width: 48%;
+}
+
+.album-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.info-wedding {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-item {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.division {
+  width: 2px;
+  background-color: #000;
+  margin: 0 1rem;
+  height: 10rem;
+}
+
+.time-wedding {
+  padding: 1rem;
+  text-align: center;
+}
+
+.time-wedding-header {
+  font-size: 1.6rem;
+}
+
+.human {
+  margin: 2rem 0 1rem 0;
+  font-size: 5rem;
+  font-family: "Mrs Saint Delafield", cursive;
+}
+
+.human-posi {
+  text-transform: uppercase;
+  margin: 2rem;
+}
+
+.and {
+  font-size: 4rem;
+  font-family: "Mrs Saint Delafield", cursive;
+}
+
+.time-desc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.division2 {
+  width: 2px;
+  background-color: #000;
+  margin: 0 1rem;
+  height: 2rem;
+}
+
+.album2 {
+  background-image: url("images/image_5.png"), url("images/image_3.png");
+  background-repeat: no-repeat;
+  background-size: 35rem, 5rem;
+  background-position: 20% 5%, 80% 50%;
+}
+
+.time-wedding-header-secondary {
+  font-size: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.count-title {
+  margin-top: 2rem;
+}
+
+.countdown {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  font-family: monospace;
+  margin-top: 2rem;
+}
+
+.time {
+  background: #e1c491;
+  color: #624537;
+  padding: 15px 18px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 80px;
+}
+
+.time span {
+  font-size: 36px;
+  font-weight: bold;
+  display: block;
+}
+
+.time small {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.info-map {
+  margin-top: 2rem;
+}
+
+.info-map-place {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background-color: #e1c491;
+  border-radius: 8px;
+}
+
+.wedding-footer {
+  width: 60%;
+}
+
+.thank-you {
+  font-size: 1.6rem;
+  white-space: wrap;
+  font-family: "Pattaya", cursive;
+  padding: 1rem;
+  background-color: #e1c491;
+  border-radius: 8px;
+}
+
+.happy {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+}
+
+.qr-title {
+  font-size: 2rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+.qr-img {
+  width: 20rem;
+  margin-top: 1rem;
+  border-radius: 12px;
+}
+
+.reval {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.reval.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  z-index: 9999;
+}
+
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #c59d5f;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.music-btn.playing {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.thank-you2 {
+  font-size: 3.5rem;
+  font-family: "Pattaya", cursive;
+}
+
+/* hiệu ứng */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* album ảnh có thể click */
+.album-image {
+  cursor: pointer;
+}
+
+/* INTRO */
+.intro {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(#2f4f3e, #1e3328);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.intro-card {
+  background: #fffaf0;
+  width: 320px;
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 16px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.intro-heart {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.intro h2 {
+  font-family: "DM Serif Display", serif;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.intro button {
+  margin-top: 20px;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 30px;
+  background: #c9a44c;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* MAIN CONTENT */
+.main-content {
+  display: none;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#snow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+#sakura {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* mobile tối giản */
+@media (max-width: 768px) {
+  .lb-btn {
+    font-size: 28px;
+  }
+}
+
+.calendar-section {
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.calendar-title {
+  font-size: 28px;
+  font-family: "DM Serif Display", serif;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.calendar-card {
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.calendar-header {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: "DM Serif Display", serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #c9a44c;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  font-size: 14px;
+}
+
+.calendar-grid div {
+  padding: 8px 0;
+  border-radius: 6px;
+}
+
+.calendar-grid .empty {
+  background: transparent;
+}
+
+.calendar-grid .wedding-day {
+  background: #d4af37;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+.calendar-grid .wedding-day::after {
+  content: "💍";
+  position: absolute;
+  top: -8px;
+  right: -6px;
+  font-size: 14px;
+}
+
+.calendar-info {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.add-calendar {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+/* ===== Carousel ===== */
+.carousel {
+  max-width: 720px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.carousel-main {
+  overflow: hidden;
+}
+
+.image-wrapper {
+  width: 100%;
+}
+
+.image-wrapper img {
+  width: 100%;
+  display: block;
+  cursor: zoom-in;
+}
+
+/* ===== Thumbnails ===== */
+.carousel-thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.thumb {
+  position: relative;
+  width: 10rem;
+  height: 9rem;
+  cursor: pointer;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.thumb.more img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb.active {
+  opacity: 1;
+  outline: 2px solid #c9a44c;
+}
+
+.thumb.more::after {
+  content: attr(data-more);
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* ===== Slide from right + fade (ONLY HERE) ===== */
+.image-wrapper.animate {
+  animation: slideFadeIn 0.6s ease;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== Lightbox ===== */
+.main-content {
+  display: none;
+}
+
+.main-content.show {
+  display: block;
+}
+
+/* ===== LIGHTBOX (CLEAN) ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lightbox .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lightbox .prev {
+  left: 30px;
+}
+
+.lightbox .next {
+  right: 30px;
+}
+
+.wedding-form {
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.wish-form {
+  padding: 1rem;
+  border: 1px solid var(--primary-color);
+  color: #624537;
+}
+
+.wedding-form__title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 500;
+  font-family: "DM Serif Display", serif;
+}
+
+.wedding-form__caption {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.wedding-form span {
+  display: block;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wedding-form input,
+.wedding-form textarea {
+  width: 90%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+}
+
+.wedding-form input::placeholder,
+.wedding-form textarea::placeholder {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.wedding-form input:focus,
+.wedding-form textarea:focus {
+  border-color: var(--primary-color);
+}
+
+.wedding-form button {
+  padding: 1rem 5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border: none;
+  font-size: 1.4rem;
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-family: "DM Serif Display", serif;
+}
+
+/* ===== Wish List ===== */
+/* ===== Wish List Auto Scroll ===== */
+.wish-list {
+  max-height: 30rem;
+  overflow-y: auto;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  scroll-behavior: smooth;
+  box-shadow: 0 10px 5px 0 #d8ddd960;
+  margin-bottom: 1rem;
+}
+
+/* Thanh scroll nhẹ nhàng */
+.wish-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.wish-list::-webkit-scrollbar-thumb {
+  background: rgba(145, 128, 77, 0.4);
+  border-radius: 3px;
+}
+
+/* Card lời chúc */
+.wish-card {
+  background: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--primary-color);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Tên người gửi */
+.wish-name {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Nội dung lời chúc */
+.wish-message {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Thời gian */
+.wish-time {
+  font-size: 1.2rem;
+  color: #999;
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+.wish-card.show {
+  animation: wishIn 0.6s ease forwards;
+}
+
+@keyframes wishIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.guest-name {
+  margin: 10px 0 10px;
+  font-family: "Caveat", cursive;
+  font-size: 3.6rem;
+  color: #c9a44c;
+  letter-spacing: 2px;
+  animation: fadeUp 1.2s infinite alternate;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(12px);
+  }
+}
+
+.family {
+  font-family: "Caveat", cursive;
+  margin-top: 5px;
+}
