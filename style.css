@@ -961,3 +961,39 @@ textarea {
 .reveal.image {
   transition: all 1.2s ease;
 }
+
+@media screen and (max-width: 360px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  .container {
+    max-width: 350px;
+  }
+
+  .info-item h3 {
+    font-size: 1.4rem;
+  }
+
+  .album .album-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 390px) and (min-width: 361px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  .container {
+    max-width: 380px;
+  }
+
+  .info-item h3 {
+    font-size: 1.4rem;
+  }
+}
+
+.container {
+  overflow-x: hidden;
+}
