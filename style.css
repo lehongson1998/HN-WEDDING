@@ -919,3 +919,45 @@ textarea {
   font-family: "Caveat", cursive;
   margin-top: 5px;
 }
+
+/* ===== REVEAL BASE ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== BIẾN THỂ ===== */
+.reveal.lefts {
+  transform: translateX(-60px);
+}
+.reveal.rights {
+  transform: translateX(60px);
+}
+.reveal.zoom {
+  transform: scale(0.9);
+}
+.reveal.blur {
+  filter: blur(12px);
+}
+
+.reveal.lefts.show,
+.reveal.rights.show,
+.reveal.zoom.show {
+  transform: none;
+}
+
+.reveal.blur.show {
+  filter: blur(0);
+}
+
+/* ảnh vào mượt hơn */
+.reveal.image {
+  transition: all 1.2s ease;
+}
