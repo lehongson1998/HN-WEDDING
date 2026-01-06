@@ -46,7 +46,7 @@ textarea {
   width: 100%;
   height: 70rem;
   background-image: linear-gradient(45deg, #f0d9d977, #e9cfbe83),
-    url("images/DH3.jpg");
+    url("images/HN3.jpg");
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
@@ -59,11 +59,11 @@ textarea {
 @keyframes changeBG {
   50% {
     background-image: linear-gradient(45deg, #f0d9d977, #e9cfbe83),
-      url("images/DH4.jpg");
+      url("images/HN4.jpg");
   }
   100% {
     background-image: linear-gradient(45deg, #f0d9d977, #e9cfbe83),
-      url("images/DH5.jpg");
+      url("images/HN5.jpg");
   }
 }
 
@@ -437,8 +437,9 @@ textarea {
 }
 
 .thank-you2 {
-  font-size: 3.5rem;
-  font-family: "Pattaya", cursive;
+  font-size: 5.5rem;
+  font-family: "Mrs Saint Delafield", cursive;
+  color: red;
 }
 
 /* hiệu ứng */
@@ -462,7 +463,7 @@ textarea {
 .intro {
   position: fixed;
   inset: 0;
-  background: radial-gradient(#2f4f3e, #1e3328);
+  background: radial-gradient(#d81919, #6e2323);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -472,26 +473,27 @@ textarea {
 .intro-card {
   background: #fffaf0;
   width: 320px;
-  padding: 40px 30px;
+  padding: 20px 10px;
   text-align: center;
   border-radius: 16px;
   animation: float 3s ease-in-out infinite;
 }
 
 .intro-heart {
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 30px;
+  color: red;
 }
 
 .intro h2 {
   font-family: "DM Serif Display", serif;
   text-transform: uppercase;
   margin-bottom: 8px;
+  font-size: 2rem;
 }
 
 .intro button {
   margin-top: 20px;
-  padding: 12px 26px;
+  padding: 10px 20px;
   border: none;
   border-radius: 30px;
   background: #c9a44c;
@@ -996,4 +998,40 @@ textarea {
 
 .container {
   overflow-x: hidden;
+}
+
+.thank-you {
+  margin: 2rem 0;
+}
+
+.map-container {
+  width: 100%;
+  background-color: #fff;
+  margin: 2rem 0;
+}
+
+.map-box {
+  width: 100%;
+  height: 280px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #c9a44c;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  text-decoration: none;
 }

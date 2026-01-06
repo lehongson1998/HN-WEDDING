@@ -188,16 +188,16 @@ function initSakura() {
 ================================ */
 function initCarousel() {
   const images = [
-    "images/DH3.jpg",
-    "images/DH4.jpg",
-    "images/DH5.jpg",
-    "images/DH6.jpg",
-    "images/DH7.jpg",
-    "images/DH8.jpg",
-    "images/DH9.jpg",
-    "images/DH10.jpg",
-    "images/DH11.jpg",
-    "images/DH12.jpg",
+    "images/HN3.jpg",
+    "images/HN4.jpg",
+    "images/HN5.jpg",
+    "images/HN6.jpg",
+    "images/HN7.jpg",
+    "images/HN8.jpg",
+    "images/HN9.jpg",
+    "images/HN10.jpg",
+    "images/HN11.jpg",
+    "images/HN12.jpg",
   ];
 
   const mainImg = document.querySelector(".image-wrapper img");
@@ -255,16 +255,16 @@ function initLightbox() {
   if (mainImage) {
     mainImage.addEventListener("click", () => {
       images = [
-        "images/DH3.jpg",
-        "images/DH4.jpg",
-        "images/DH5.jpg",
-        "images/DH6.jpg",
-        "images/DH7.jpg",
-        "images/DH8.jpg",
-        "images/DH9.jpg",
-        "images/DH10.jpg",
-        "images/DH11.jpg",
-        "images/DH12.jpg",
+        "images/HN3.jpg",
+        "images/HN4.jpg",
+        "images/HN5.jpg",
+        "images/HN6.jpg",
+        "images/HN7.jpg",
+        "images/HN8.jpg",
+        "images/HN9.jpg",
+        "images/HN10.jpg",
+        "images/HN11.jpg",
+        "images/HN12.jpg",
       ];
       current = images.indexOf(mainImage.src.split("/").pop());
       img.src = images[current];
@@ -327,7 +327,7 @@ function initReveal() {
    COUNTDOWN
 ================================ */
 function initCountdown() {
-  const target = new Date("2026-01-23T09:00:00+07:00").getTime();
+  const target = new Date("2026-02-06T09:00:00+07:00").getTime();
 
   const d = document.getElementById("days");
   const h = document.getElementById("hours");
